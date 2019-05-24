@@ -107,7 +107,7 @@ class FaceCV(object):
                 self.draw_label(frame, (face[0], face[1]), label)
 
             cv2.imshow('Keras Faces', frame)
-            if cv2.waitKey(5) == 27:  # ESC key press
+            if cv2.waitKey(1) & 0xFF == ord('q'):
                 break
         # When everything is done, release the capture
         video_capture.release()

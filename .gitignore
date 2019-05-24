@@ -1,2 +1,5 @@
+emotion_detection/data/
 *.hdf5
 .ipynb_checkpoints
+*.pyc
+*.h5
