@@ -17,7 +17,8 @@ import matplotlib.pyplot as plt
 ap = argparse.ArgumentParser()
 ap.add_argument("--mode",help="train/display")
 a = ap.parse_args()
-mode = a.mode 
+# mode = a.mode 
+mode = "display"
 
 def plot_model_history(model_history):
     """
