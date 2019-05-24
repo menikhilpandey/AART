@@ -3,7 +3,7 @@ import dlib
 import numpy as np
 from imutils import face_utils
 
-face_landmark_path = './shape_predictor_68_face_landmarks.dat'
+face_landmark_path = './../trained_models/shape_predictor_68_face_landmarks.dat'
 
 K = [6.5308391993466671e+002, 0.0, 3.1950000000000000e+002,
      0.0, 6.5308391993466671e+002, 2.3950000000000000e+002,
