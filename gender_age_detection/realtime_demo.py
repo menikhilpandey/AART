@@ -73,7 +73,7 @@ class FaceCV(object):
         face_cascade = cv2.CascadeClassifier(self.CASE_PATH)
 
         # 0 means the default video capture device in OS
-        video_capture = cv2.VideoCapture(0)
+        video_capture = cv2.VideoCapture('../video.mp4')
         # infinite loop, break by key ESC
         while True:
             if not video_capture.isOpened():
@@ -105,7 +105,7 @@ class FaceCV(object):
                 label = "{}, {}".format(int(predicted_ages[i]),
                                         "F" if predicted_genders[i][0] > 0.5 else "M")
                 self.draw_label(frame, (face[0], face[1]), label)
-
+            frame = cv2.resize(frame,(1920,1080),interpolation = cv2.INTER_CUBIC)
             cv2.imshow('Keras Faces', frame)
             if cv2.waitKey(1) & 0xFF == ord('q'):
                 break
